@@ -66,12 +66,8 @@ h6 {
 
 h1 {
   font-size: 2.121rem;
-  line-height: 2.25rem;
-  margin-top: 2.25rem;
-  
-  border-right: solid 4px #ffffff;
-  white-space: nowrap;
-  overflow: hidden;    
+
+
 }
 
 h2 {
@@ -441,24 +437,6 @@ main {
   margin: 0
 }
 
-h1 {
-  animation: animated-text 2.5s steps(11,end) 1s 1 normal both,
-             animated-cursor 500ms steps(11,end) infinite;
-}
-
-/* text animation */
-@keyframes animated-text{
-  from{width: 0;}
-  to{width: 281px;}
-}
-
-/* cursor animations */
-@keyframes animated-cursor{
-  from{border-right-color: #ffffff;}
-  to{border-right-color: transparent;}
-}
-
-
 .splash h2 {
   font-size: 2.25em;
   font-weight: 500;
@@ -500,4 +478,15 @@ article {
   padding-top: 0;
   padding-bottom: 0;
   height: 100%
+}
+
+span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
 }
