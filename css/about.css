@@ -67,10 +67,9 @@ h6 {
 h1 {
   font-size: 2.121rem;
 
-  /*
   border-right: .05em solid;
-  animation: caret 1s steps(1) infinite;
-  */
+  animation: caret 1s steps(1) infinite
+
 }
 
 h2 {
@@ -483,9 +482,9 @@ article {
   height: 100%
 }
 
-/*
+
 span {
-   border-right: .05em solid;
+  border-right: .05em solid;
   animation: caret 1s steps(1) infinite; 
 }
 
@@ -493,36 +492,4 @@ span {
   50% {
     border-color: transparent;
   }
-}
-
-*/
-
-
-.var-highlight{
-  color: #C0AD60;
-}
-.string-highlight{
-  color: rgba(253, 149, 90, 0.8);
-}
-
-#typewriter{
-    *:after{
-      content: "|";
-      animation: blink 500ms linear infinite alternate;
-    }
-}
-
-@-webkit-keyframes blink{
-  0%{opacity: 0;}
-  100%{opacity: 1;}
-}
-
-@-moz-keyframes blink{
-  0%{opacity: 0;}
-  100%{opacity: 1;}
-}
-
-@keyframes blink{
-  0%{opacity: 0;}
-  100%{opacity: 1;}
 }
