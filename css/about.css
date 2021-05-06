@@ -481,7 +481,7 @@ article {
 }
 
 span {
-  border-right: .05em solid;
+  /* border-right: .05em solid;*/
   animation: caret 1s steps(1) infinite;
 }
 
