@@ -487,8 +487,8 @@ article {
   100% { opacity: 1; }
 }
 .cursor::after {
-  content: "|";
-  font-size: 5rem;
+  content: "l";
+  font-size: 3.5rem;
  /*margin-top: 1.5rem;
   margin-bottom: 2rem; 
   line-height: 1.5rem; */
