@@ -21,7 +21,7 @@ initBurger()
 
 document.addEventListener('DOMContentLoaded',function(event){
   // array with texts to type in typewriter
-  var dataText = [ "Hi, I'm Dan"];
+  var dataText = document.querySelector("h1").innerHTML;
   
   // type one text in the typwriter
   // keeps calling itself until the text is finished
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded',function(event){
     // check if text isn't finished yet
     if (i < (text.length)) {
       // add next character to h1
-     document.querySelector("h1").innerHTML = text.substring(0, i+1);// +'<span aria-hidden="true"></span>';
+     document.querySelector("h1").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
 
       // wait for a while and call this function again for next character
       setTimeout(function() {
