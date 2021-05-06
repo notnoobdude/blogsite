@@ -482,7 +482,18 @@ article {
   height: 100%
 }
 
+@keyframes blink {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.cursor::after {
+  content: "|";
+  font-size: 1.5em;
+  font-weight: bold;
+  animation: blink infinite 0.7s;
+}
 
+/*
 span {
   border-right: .05em solid;
   animation: caret 1s steps(1) infinite; 
@@ -493,3 +504,4 @@ span {
     border-color: transparent;
   }
 }
+*/
