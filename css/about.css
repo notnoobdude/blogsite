@@ -489,8 +489,8 @@ article {
 .cursor::after {
   content: "|";
   font-size: 1em;
-   margin-top: 1.5rem;
-  margin-bottom: 2rem;
+/*  margin-top: 1.5rem;
+  margin-bottom: 2rem; */
   line-height: 1.5rem;
   animation: blink infinite 0.7s;
 }
