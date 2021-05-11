@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on dnx.zone</title>
-    <link>https://dnx.zone/blog/</link>
+    <link>https://dnx.zone/writeups/</link>
     <description>Recent content in Blogs on dnx.zone</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© {year}</copyright>
     <lastBuildDate>Sat, 29 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://dnx.zone/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dnx.zone/writeups/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Facebook] Page Admin Disclosure via an Upgraded Page Post</title>
-      <link>https://dnx.zone/blog/fb-page-admin-disclosure-via-an-upgraded-page-post/</link>
+      <link>https://dnx.zone/writeups/fb-page-admin-disclosure-via-an-upgraded-page-post/</link>
       <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dnx.zone/blog/fb-page-admin-disclosure-via-an-upgraded-page-post/</guid>
+      <guid>https://dnx.zone/writeups/fb-page-admin-disclosure-via-an-upgraded-page-post/</guid>
       <description>Been in the bug bounty and/or ethical hacking scene for more than 4 years now and this is my first write-up (I hope you bear with me) since most of the programs I hunt into are not allowing disclosures. I mostly hunt vulnerabilities on Alibaba and other independent/private bug bounty programs.
 Description Soooo I was posting for a special event that happened in one of my organization’s pages. I upgraded that post through a prompt message, “It looks like something special happened.</description>
     </item>
