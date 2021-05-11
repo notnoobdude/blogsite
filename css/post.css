@@ -15,8 +15,8 @@ input[type=email] {
 
 html,
 body {
-  background-color: #fff;
-  color: #111;
+  background-color: #111;
+  color: #fff;
   height: 100%
 }
 
@@ -116,7 +116,7 @@ blockquote {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   line-height: 1.5rem;
-  color: #717171;
+  color: #fff;
   font-style: italic;
 }
 
@@ -126,7 +126,7 @@ pre {
   padding: 16px;
   word-wrap: normal;
   overflow: auto;
-  background-color: #f6f8fa;
+  background-color: #111;
   border-radius: 3px
 }
 
@@ -170,7 +170,7 @@ pre code {
   padding: 0 1.5rem;
   position: fixed;
   width: 100%;
-  background: #fff;
+  background: #111;
   z-index: 2;
 }
 
@@ -238,7 +238,7 @@ pre code {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: #fff;
+  background: #111;
   visibility: hidden;
   z-index: 1;
 }
@@ -304,7 +304,7 @@ pre code {
 }
 
 .nav__list a {
-  color: #9b9b9b;
+  color: #fff;
   text-decoration: none;
   font-size: 2em;
 }
@@ -359,13 +359,54 @@ main {
   background-repeat: no-repeat
 }
 
-.social-icons__icon--twitter {
-  background-image: url("/icons/twitter.svg");
-  margin-right: 2rem
+.social-icons__icon--email {
+  background-image: url("/icons/email.svg");
+  margin-right: 2em
+}
+
+.social-icons__icon--email:hover {
+  background-image: url("/icons/email.svg");
+  margin-right: 2em;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite
 }
 
 .social-icons__icon--github {
-  background-image: url("/icons/github.svg")
+  background-image: url("/icons/github.svg");
+  margin-right: 2em
+}
+
+.social-icons__icon--github:hover {
+  background-image: url("/icons/github.svg");
+  margin-right: 2em;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite
+}
+
+.social-icons__icon--linkedin {
+  background-image: url("/icons/linkedin.svg");
+  margin-right: 2em;
+}
+
+.social-icons__icon--linkedin:hover {
+  background-image: url("/icons/linkedin.svg");
+  margin-right: 2em;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite
+}
+
+@keyframes shake {
+  0% { transform: translate(0.5px, 0.5px) rotate(0deg); }
+  10% { transform: translate(-0.5px, -1px) rotate(-0.5deg); }
+  20% { transform: translate(-1.5px, 0px) rotate(0.5deg); }
+  30% { transform: translate(1.5px, 1px) rotate(0deg); }
+  40% { transform: translate(0.5px, -0.5px) rotate(0.5deg); }
+  50% { transform: translate(-0.5px, 1px) rotate(-0.5deg); }
+  60% { transform: translate(-1.5px, 0.5px) rotate(0deg); }
+  70% { transform: translate(1.5px, 0.5px) rotate(-0.5deg); }
+  80% { transform: translate(-0.5px, -0.5px) rotate(0.5deg); }
+  90% { transform: translate(0.5px, 1px) rotate(0deg); }
+  100% { transform: translate(0.5px, -1px) rotate(-0.5deg); }
 }
 
 code[class*="language-"],
@@ -442,9 +483,11 @@ pre[class*="language-"] {
   color: #032f62
 }
 
+/*
 .language-jsx span.[class="comment"] {
   color: #ffc0cb
 }
+*/
 
 .language-html .token.tag .token.punctuation {
   color: #24292e
@@ -693,7 +736,7 @@ pre[class*="language-"] {
 
 .note code {
   font-size: 12px;
-  color: #717171;
+  color: #111;
   background-color: transparent;
 }
 
@@ -703,7 +746,7 @@ pre[class*="language-"] {
 }
 
 .note a {
-  color: #717171;
+  color: #fff;
   text-decoration: underline
 }
 
@@ -836,11 +879,11 @@ p.warning a {
 footer {
   text-align: center;
   padding: 0 1.5rem;
-  background: #ffffff;
+  background: #111;
 }
 
 footer p {
-  color: #9b9b9b;
+  color: #fff;
   font-size: .65rem
 }
 
