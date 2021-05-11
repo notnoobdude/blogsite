@@ -395,6 +395,18 @@ main {
   animation-iteration-count: infinite
 }
 
+.social-icons__icon--gitlab {
+  background-image: url("/icons/gitlab.svg");
+  margin-right: 2em;
+}
+
+.social-icons__icon--gitlab:hover {
+  background-image: url("/icons/gitlab.svg");
+  margin-right: 2em;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite
+}
+
 @keyframes shake {
   0% { transform: translate(0.5px, 0.5px) rotate(0deg); }
   10% { transform: translate(-0.5px, -1px) rotate(-0.5deg); }
