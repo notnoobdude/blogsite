@@ -15,8 +15,8 @@ input[type=email] {
 
 html,
 body {
-  background-color: #fff;
-  color: #111;
+  background-color: #111;
+  color: #fff;
   height: 100%
 }
 
@@ -115,7 +115,7 @@ blockquote {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   line-height: 1.5rem;
-  color: #717171;
+  color: #fff;
   font-style: italic;
 }
 
@@ -125,7 +125,7 @@ pre {
   padding: 16px;
   word-wrap: normal;
   overflow: auto;
-  background-color: #f6f8fa;
+  background-color: #fff;
   border-radius: 3px
 }
 
@@ -237,7 +237,7 @@ pre code {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: #fff;
+  background: #111;
   visibility: hidden;
   z-index: 1;
 }
@@ -303,7 +303,7 @@ pre code {
 }
 
 .nav__list a {
-  color: #9b9b9b;
+  color: #fff;
   text-decoration: none;
   font-size: 2em;
 }
@@ -313,7 +313,7 @@ pre code {
 }
 
 .nav__list a:hover {
-  color: #111
+  color: #717171
 }
 
 @media screen and (min-width:800px) {
@@ -370,12 +370,12 @@ main {
 }
 
 .post__title a {
-  color: #111;
+  color: #fff;
   text-decoration: none
 }
 
 .post__date {
-  color: #9b9b9b;
+  color: #fff;
   font-size: .8rem
 }
 
@@ -420,7 +420,7 @@ main {
 
 .tag__link {
   text-decoration: none;
-  color: #9b9b9b;
+  color: #fff;
   font-size: .9rem;
 }
 
