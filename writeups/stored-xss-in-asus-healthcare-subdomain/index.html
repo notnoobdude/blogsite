@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  
+
+  <title>[ASUS] Stored XSS in ASUS Healthcare Subdomain</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="this is just a test">
+  <meta name="keywords" content="bugbounty , bug bounty , writeup">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="google-site-verification" content="8cyiY374WL2LGr87fBghcdJCRx6BaPNBvLjeZlk6tyc" />
+  
+
+  <link rel="shortcut icon" type="image/png" href="https://dnx.zone/favicon.ico" />
+  
+<link rel="stylesheet" href="https://dnx.zone/css/post.css" /> 
+
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://dnx.zone"
+      },
+      "articleSection" : "blog",
+      "name" : "[ASUS] Stored XSS in ASUS Healthcare Subdomain",
+      "headline" : "[ASUS] Stored XSS in ASUS Healthcare Subdomain",
+      "description" : "this is just a test",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2018",
+      "datePublished": "2018-02-18 00:00:00 &#43;0000 UTC",
+      "dateModified" : "2018-02-18 00:00:00 &#43;0000 UTC",
+      "url" : "https://dnx.zone/blog/stored-xss-in-asus-healthcare-subdomain/",
+      "wordCount" : "258",
+      "keywords" : ["bugbounty", "bug bounty", "writeup", "Blog"]
+    }
+  
+  </script>
+
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" role="navigation">
+  <ul class="nav__list">
+     
+    
+      <li>
+        <a  href="https://dnx.zone/">home</a>
+      </li>
+    
+      <li>
+        <a  href="https://dnx.zone/about">about</a>
+      </li>
+    
+      <li>
+        <a  href="https://dnx.zone/projects">projects</a>
+      </li>
+    
+      <li>
+        <a  href="https://dnx.zone/writeups">write-ups</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+<div class="post">
+  <header class="post__header">
+    <h1 class="post__title">[ASUS] Stored XSS in ASUS Healthcare Subdomain</h1>
+    <time datetime="2018-02-18 00:00:00 &#43;0000 UTC" class="post__date"
+      >Feb 18 2018</time
+    >
+  </header>
+  <article class="post__content">
+    
+
+
+<p>I found this vulnerability while poking around the subdomains of ASUS wayback 2018. Such subdomain was still relatively new that time which means that potentially juicy security issues are still an easy catch. If I can remember correctly, this security issue was found when I was on a <a href="https://www.gadgetspecsph.com/what-is-pisonet/">&lsquo;pisonet&rsquo;</a> together with my friends and playing DOTA 2. 🤣</p>
+
+<h1 id="description">Description</h1>
+
+<p>ASUS Healthcare is a health data management platform wherein end users can keep track of his or her self, family, and friend&rsquo;s health data using the wearable or IoT device they use in place. Unfortunately, as of this time (2021), the web application was discontinued.</p>
+
+<p>Stored XSS was possible in this platform since there was no sanitization functions or filters in place when data is entered and fed towards the end user&rsquo;s health statistics. Doing so, an attacker can simply just enter a javascript payload.</p>
+
+<h1 id="steps-to-replicate">Steps to Replicate</h1>
+
+<ol>
+<li>Login and navigate towards your account&rsquo;s dashboard section.</li>
+<li>On the Blood Sugar Measurement panel, click on &lsquo;+&rsquo; to add a new data.</li>
+<li>Supply all the necessary information, but on the Medicine Before Measurement checkbox, it should be checked to enable the input field and thus the entry of the infamous <code>&quot;&gt;&lt;img src=x onerror=prompt(1)&gt;</code> payload.</li>
+<li>Then, click on the +Add button.</li>
+<li>Navigate to the profile that payload is in and notice an alert box popped.</li>
+</ol>
+
+<h1 id="impact">Impact</h1>
+
+<p>“Injection of scripts was possible.” -ASUS</p>
+
+<h1 id="proof-of-concept">Proof of Concept</h1>
+
+
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/KEH4xJX63rE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0" title="YouTube Video"></iframe>
+ </div>
+
+
+<h1 id="timeline">Timeline</h1>
+
+<p>February 18, 2018 :: Report Submitted</p>
+
+<p>February 21, 2018 :: Triaged</p>
+
+<p>March 08, 2018 :: Security issue fixed</p>
+
+<p>March 15, 2018 :: Entered the 🏆<a href="https://www.asus.com/content/ASUS-Product-Security-Advisory/">ASUS Hall-of-Fame</a></p>
+
+
+    
+  </article>
+  
+
+<ul class="tags__list">
+    
+    
+    </ul>
+
+ <div class="pagination">
+  
+
+  
+    <a class="pagination__item" href="https://dnx.zone/writeups/how-i-hacked-your-favorite-ecommerce-site-wayback-2018/">
+      <span class="pagination__label">Next Post</span>
+      <span class="pagination__title" >[Redacted] Multiple Web Application Security Bugs in your favorite Filipino or SEA e-Commerce site</a>
+    </a>
+  
+</div>
+
+</div>
+
+  </main>
+
+  
+<footer>
+  <div class="social-icons">
+  
+  <a class="social-icons__icon social-icons__icon--linkedin" href="https://linkedin.com/in/0x61underscore" target="_blank" rel="noopener noreferrer"></a>
+  
+
+  
+  <a class="social-icons__icon social-icons__icon--github" href="https://github.com/notnoobdude" target="_blank" rel="noopener noreferrer"></a>
+  
+
+  
+  <a class="social-icons__icon social-icons__icon--email" href="mailto:difabro@ustp.edu.ph" target="_blank" rel="noopener noreferrer"></a>
+  
+
+  
+  <a class="social-icons__icon social-icons__icon--gitlab" href="https://gitlab.com/notnoobdude" target="_blank" rel="noopener noreferrer"></a>
+  
+</div>
+
+  <p>Dan Fabro  © 2021</p>
+</footer>
+
+
+  <script src="https://dnx.zone/js/index.js"></script>
+  
+<script src="https://dnx.zone/vendor/prism/prism.js"></script>
+
+</body>
+
+</html>
