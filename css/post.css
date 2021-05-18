@@ -347,9 +347,12 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center
+  -ms-flex-pack: center
 }
 
 .social-icons__icon {
@@ -361,24 +364,28 @@ main {
 
 .social-icons__icon--email {
   background-image: url("/icons/email.svg");
-  margin-right: 2em
+  margin-right: 1.8em;
+  margin-left: 2em
 }
 
 .social-icons__icon--email:hover {
   background-image: url("/icons/email.svg");
-  margin-right: 2em;
+  margin-right: 1.5em;
+  margin-left: 2em;
   animation: shake 0.5s;
   animation-iteration-count: infinite
 }
 
 .social-icons__icon--github {
   background-image: url("/icons/github.svg");
-  margin-right: 2em
+  margin-right: 2em;
+  margin-left: 2em
 }
 
 .social-icons__icon--github:hover {
   background-image: url("/icons/github.svg");
-  margin-right: 2em;
+  margin-right: 1.5em;
+  margin-left: 2em;
   animation: shake 0.5s;
   animation-iteration-count: infinite
 }
@@ -386,11 +393,13 @@ main {
 .social-icons__icon--linkedin {
   background-image: url("/icons/linkedin.svg");
   margin-right: 2em;
+  margin-left: 2em
 }
 
 .social-icons__icon--linkedin:hover {
   background-image: url("/icons/linkedin.svg");
   margin-right: 2em;
+  margin-left: 2em;
   animation: shake 0.5s;
   animation-iteration-count: infinite
 }
@@ -398,11 +407,13 @@ main {
 .social-icons__icon--gitlab {
   background-image: url("/icons/gitlab.svg");
   margin-right: 2em;
+  margin-left: 2em
 }
 
 .social-icons__icon--gitlab:hover {
   background-image: url("/icons/gitlab.svg");
   margin-right: 2em;
+  margin-left: 2em;
   animation: shake 0.5s;
   animation-iteration-count: infinite
 }
