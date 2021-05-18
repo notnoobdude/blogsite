@@ -906,32 +906,16 @@ p.warning a {
   margin-top: .25rem
 }
 
-img{
-  position: center;
-  z-index: 1;
-  height: 164px;
-  width: 164px;
-  margin-bottom: 35px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid white;
-  -webkit-box-shadow: 0px 15.619px 31.2381px #fff;
-          box-shadow: 0px 15.619px 31.2381px #fff;
-
-  /*TABLET*/
-  @media screen and (max-width: $tablet){
-      width: 146px;
-      height: 146px;
-  }
-
-  /*PHABLET*/
-  @media screen and (max-width: $phablet){
-      width: 136px;
-      height: 136px;
-      margin-bottom: 25px;
-  }
+.img-circular{
+ width: 200px;
+ height: 200px;
+ background-image: url('https://dnx.zone/images/danfabro1.jpg');
+ background-size: cover;
+ display: block;
+ border-radius: 100px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
 }
-
 
 footer {
   text-align: center;
