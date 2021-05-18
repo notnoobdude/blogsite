@@ -364,13 +364,13 @@ main {
 
 .social-icons__icon--email {
   background-image: url("/icons/email.svg");
-  margin-right: 1.8em;
+  margin-right: 2em;
   margin-left: 2em
 }
 
 .social-icons__icon--email:hover {
   background-image: url("/icons/email.svg");
-  margin-right: 1.5em;
+  margin-right: 2em;
   margin-left: 2em;
   animation: shake 0.5s;
   animation-iteration-count: infinite
@@ -384,7 +384,7 @@ main {
 
 .social-icons__icon--github:hover {
   background-image: url("/icons/github.svg");
-  margin-right: 1.5em;
+  margin-right: 2em;
   margin-left: 2em;
   animation: shake 0.5s;
   animation-iteration-count: infinite
