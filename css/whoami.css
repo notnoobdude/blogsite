@@ -909,6 +909,7 @@ p.warning a {
 .img-circular{
  width: 200px;
  height: 200px;
+ float: left;
  background-image: url('https://dnx.zone/images/danfabro1.jpg');
  background-size: cover;
  margin-bottom: 35px;
