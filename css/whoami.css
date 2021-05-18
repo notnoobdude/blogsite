@@ -912,13 +912,13 @@ p.warning a {
  float: left;
  background-image: url('https://dnx.zone/images/danfabro1.jpg');
  background-size: cover;
- margin-bottom: 34px;
- margin-right: 22px;
+ margin-bottom: 31px;
+ margin-right: 23px;
  display: block;
  border-radius: 100px;
  border: 2px solid white;
- -webkit-box-shadow: 0px 14.619px 28px #fff;
-         box-shadow: 0px 14.619px 28px #fff;
+ -webkit-box-shadow: 0px 14px 20px #fff;
+         box-shadow: 0px 14px 20px #fff;
  -webkit-border-radius: 100px;
  -moz-border-radius: 100px;
 }
@@ -944,7 +944,7 @@ footer p {
 }
 .cursor::after {
   content: "l";
-  font-size: 3.5rem;
+  font-size: 3rem;
  /*margin-top: 1.5rem;
   margin-bottom: 2rem; 
   line-height: 1.5rem; */
