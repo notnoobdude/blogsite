@@ -907,15 +907,15 @@ p.warning a {
 }
 
 .img-circular{
- width: 150px;
- height: 150px;
+ width: 132px;
+ height: 132px;
  float: left;
  background-image: url('https://dnx.zone/images/danfabro1.jpg');
  background-size: cover;
- margin-bottom: 26px;
- margin-right: 21px;
+ margin-bottom: 25px;
+ margin-right: 20px;
  display: block;
- border-radius: 30px;
+ border-radius: 27px;
  border: 2px solid white;
  -webkit-box-shadow: 0px 12px 15px #fff;
          box-shadow: 0px 12px 15px #fff;
