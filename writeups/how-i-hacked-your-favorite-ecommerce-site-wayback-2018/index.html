@@ -124,6 +124,8 @@
 <p>As for Open Redirect, there are a lot utilizations for it. For two, it might be used in redirecting the victim user to a malicious site and/or it might be used to chain with other web application attacks such as <a href="https://portswigger.net/web-security/csrf">CSRF</a> or <a href="https://spycloud.com/what-is-account-takeover/">Account Takeover</a>.</p>
 
 <p>For SSRF or <a href="https://portswigger.net/web-security/ssrf">Server-Side Request Forgery</a>, it might be used as means to execute unauthorized actions or perhaps fetch some data within the organization or company.</p>
+
+  <img src="https://dnx.zone/images/hacker1.svg">  
     
 <h1 id="further-notes">Further Notes</h1>
 
@@ -132,9 +134,7 @@
 <p>One common thing that I did in all of these web application vulnerabilities is that equipping thy self with a &ldquo;what if I became the evil seller here?&rdquo; mentality. Instead of hunting for vulnerabilities on the Buyer&rsquo;s end, which is commonly what others would do, I hunted and applied use cases via the Seller's perspective. Fuzzed and recon'd the platform all through out and for every endpoint, parameter, or field I could identify, I try to check the source code and its behavior if there's any form of user input sanitation implemented to it. If there's one, proceed to application of some bypasses. If there's none, proceed to exploitation. Likewise, the method of always keeping tabs with a checklist especially detailing which features, pages, endpoints, and/or fields are being displayed/accessible on the Buyer's end and what is not, also towards the Seller, how they are interconnected, and triggering factors--I took notes of all the things I could potentially simulate an 'attack' or place my payloads into. This resulted to the discovery of those findings.</p>
 
 <p>Most of the findings I found in this platform are marked as High severity. If you were wondering why the bounty amount is only like that even if its mostly High in severity, it is due to their policies in place (Yep, I know, somehow low compared to others, but still, that&rsquo;s some buck when you&rsquo;re situated in the Philippines). Below are the range of bounty amounts for each severity:</p>
-
-    <img src="https://dnx.zone/images/hacker1.svg">
-    
+   
 <ul>
 <li>Critical -&gt; $900-1000</li>
 <li>High / Important -&gt; $300-400</li>
