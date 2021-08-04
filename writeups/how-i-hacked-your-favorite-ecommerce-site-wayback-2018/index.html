@@ -118,15 +118,12 @@
 <p>The rewards given by such bug bounty program is based on their own range of bounty standard.</p>
 
 <h1 id="description">Description</h1>
-<div style="background-image: url("https://dnx.zone/images/code2.svg"); display: block; float: left; height: 80%; width: 100%; background-size: 100%; background-blend-mode: screen; background-repeat: no-repeat;">
 
 <p>To those who don&rsquo;t know yet, Stored XSS or Persistent Cross-Site Scripting vulnerability is considered to be the <a href="https://portswigger.net/web-security/cross-site-scripting/stored">most impactful</a> than the other types of XSSes. This is due to the fact that it is, by nature, self-contained and triggers the applied malicious scripts even without no user interaction. The impact towards the platform is significantly high also because the victims are already logged in (which might be prone to stealing of authenticated tokens), compared to <a href="https://portswigger.net/web-security/cross-site-scripting/reflected">Reflected XSS</a> wherein the attacker still has to, somehow, assume that the victim user is currently logged in&ndash;thus, with a lower bug bounty reward.</p>
 
 <p>As for Open Redirect, there are a lot utilizations for it. For two, it might be used in redirecting the victim user to a malicious site and/or it might be used to chain with other web application attacks such as <a href="https://portswigger.net/web-security/csrf">CSRF</a> or <a href="https://spycloud.com/what-is-account-takeover/">Account Takeover</a>.</p>
 
 <p>For SSRF or <a href="https://portswigger.net/web-security/ssrf">Server-Side Request Forgery</a>, it might be used as means to execute unauthorized actions or perhaps fetch some data within the organization or company.</p>
-
-</div> 
     
 <h1 id="further-notes">Further Notes</h1>
 
@@ -136,6 +133,8 @@
 
 <p>Most of the findings I found in this platform are marked as High severity. If you were wondering why the bounty amount is only like that even if its mostly High in severity, it is due to their policies in place (Yep, I know, somehow low compared to others, but still, that&rsquo;s some buck when you&rsquo;re situated in the Philippines). Below are the range of bounty amounts for each severity:</p>
 
+    <img src="https://dnx.zone/images/code2.svg">
+    
 <ul>
 <li>Critical -&gt; $900-1000</li>
 <li>High / Important -&gt; $300-400</li>
