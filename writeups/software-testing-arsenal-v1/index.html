@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <title>Software Testing Arsenal v1.0</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="this is just a test">
+  <meta name="keywords" content="Software Testing, Software QA, Software Quality Assurance">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:title" content="Software Testing Arsenal v1.0" />
+  <meta name="og:description" content="" />
+  <meta property="og:image" content="https://www.indiumsoftware.com/blog/wp-content/uploads/2019/01/7-Reasons-Why-Software-Testing-is-Important.jpg" />
+
+  <link rel="shortcut icon" type="image/png" href="https://dnx.zone/favicon.ico" />
+  
+<link rel="stylesheet" href="https://dnx.zone/css/post.css" /> 
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://dnx.zone"
+      },
+      "articleSection" : "blog",
+      "name" : "Software Testing Arsenal v1.0",
+      "headline" : "Software Testing Arsenal v1.0",
+      "description" : "",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2021",
+      "datePublished": "2021-08-04 00:00:00 &#43;0000 UTC",
+      "dateModified" : "",
+      "url" : "https://dnx.zone/writeups/software-testing-arsenal-v1/",
+      "wordCount" : "",
+      "keywords" : ["software qa", "software testing", "sqa"]
+    }
+  
+  </script>
+
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" role="navigation">
+  <ul class="nav__list">
+     
+      <li>
+        <a  href="https://dnx.zone/">home</a>
+      </li>
+    
+      <li>
+        <a  href="https://dnx.zone/about">about</a>
+      </li>
+    
+      <li>
+        <a  href="https://dnx.zone/projects">projects</a>
+      </li>
+    
+      <li>
+        <a  href="https://dnx.zone/writeups">write-ups</a>
+      </li>
+    
+  </ul>
+</nav>
+
+  <main>
+    
+<div class="post">
+  <header class="post__header">
+    <h1 class="post__title">Software Testing Arsenal v1.0</h1>
+    <time datetime="2018-08-27 00:00:00 &#43;0000 UTC" class="post__date"
+      >Aug 17 2021</time
+    >
+  </header>
+  <article class="post__content">
+
+<p>It's been a year since day one of me working as a SQA Engineer at a software development company here in the Philippines and I must say that I really learned a lot. Going out of my forte as a penetration tester, I managed to experience other types of testing methodologies and got to test out multiple projects as well.</p>
+
+<p>Prior to this engagement, I didn't have any experience with Software Quality Assurance, and I must say, those Youtube videos and free learning resources did really helped me a lot in gaining insights, fundamental knowledge, and skills. Nevertheless, this blog is not about my experience, but is about the first version compilation of my software testing arsenal. 
+    
+    
+<h1 id="tool_relevance">Relevance of Software Testing Tools</h1>
+
+<p>Like any other profession, certain tools are needed to accomplish some particular tasks. In the software testing industry, there are several testing techniques that are covered and needs to be conducted depending on the test requirements and project specifications. Before reaching the end users, intensive software testing is done to identify the issues that the developing project upholds. With this in mind, time is one huge factor. The faster the QA personnel does his/her tests and with precision, sprint deadlines will surely be met.</p>
+<p>Software testing is one vital part of the Software Development Life Cycle (SDLC) process that's why the QA personnel needs to fully understand the end users or client audience to come up with the necessary test cases that will help in improving and meeting their satisfaction.
+    
+    
+<ul>
+<li>STORED XSS via Product Title field ($400)</li>
+<li>STORED XSS via Shop Name field ($400)</li>
+<li>STORED XSS by bypassing File Upload default filetypes($400)</li>
+<li>STORED XSS via insertion on Multi-Clickable Banner&rsquo;s URL ($300)</li>
+<li>STORED XSS via Voucher Promotion&rsquo;s Title and Description ($300)</li>
+<li>STORED XSS via Free Style Feed ($300)</li>
+<li>SSRF via coverURL param ($300)</li>
+<li>OPEN REDIRECT via todo param ($100)</li>
+<li>SSRF via Product Link field ($300)</li>
+<li>SSRF via imageURL param ($300)</li>
+<li>SSRF via freestyleImgUrl param ($160)</li>
+<li>SSRF via coverURL param ($300)</li>
+
+</ul>
+
+<p>The rewards given by such bug bounty program is based on their own range of bounty standard.</p>
+
+<h1 id="description">Description</h1>
+
+<p>To those who don&rsquo;t know yet, Stored XSS or Persistent Cross-Site Scripting vulnerability is considered to be the <a href="https://portswigger.net/web-security/cross-site-scripting/stored">most impactful</a> than the other types of XSSes. This is due to the fact that it is, by nature, self-contained and triggers the applied malicious scripts even without no user interaction. The impact towards the platform is significantly high also because the victims are already logged in (which might be prone to stealing of authenticated tokens), compared to <a href="https://portswigger.net/web-security/cross-site-scripting/reflected">Reflected XSS</a> wherein the attacker still has to, somehow, assume that the victim user is currently logged in&ndash;thus, with a lower bug bounty reward.</p>
+
+<p>As for Open Redirect, there are a lot utilizations for it. For two, it might be used in redirecting the victim user to a malicious site and/or it might be used to chain with other web application attacks such as <a href="https://portswigger.net/web-security/csrf">CSRF</a> or <a href="https://spycloud.com/what-is-account-takeover/">Account Takeover</a>.</p>
+
+<p>For SSRF or <a href="https://portswigger.net/web-security/ssrf">Server-Side Request Forgery</a>, it might be used as means to execute unauthorized actions or perhaps fetch some data within the organization or company.</p>
+
+  <img src="https://dnx.zone/images/hacker1.svg">  
+    
+<h1 id="further-notes">Further Notes</h1>
+
+<p>Since this is an e-Commerce platform, there are two user privileges that were identified here: The Seller and the Buyer. The Seller initiates the creation, edit, and deletion of the Shop along with its vouchers, products, promos, shop designs, you name it. The Seller can also be the Buyer. While the Buyer can only and primarily visit the shop, choose which products to &lsquo;addutucartu&rsquo;, and checkout. Note that the Buyer and the Seller have different user interfaces. The Seller needs to log in on the &lsquo;main&rsquo; site, instead of the seller site, for him/her to buy some products.</p>
+
+<p>One common thing that I did in all of these web application vulnerabilities is that equipping thy self with a &ldquo;what if I became the evil seller here?&rdquo; mentality. Instead of hunting for vulnerabilities on the Buyer&rsquo;s end, which is commonly what others would do, I hunted and applied use cases via the Seller's perspective. Fuzzed and recon'd the platform all through out and for every endpoint, parameter, or field I could identify, I try to check the source code and its behavior if there's any form of user input sanitation implemented to it. If there's one, proceed to application of some bypasses. If there's none, proceed to exploitation. Likewise, the method of always keeping tabs with a checklist especially detailing which features, pages, endpoints, and/or fields are being displayed/accessible on the Buyer's end and what is not, also towards the Seller, how they are interconnected, and triggering factors--I took notes of all the things I could potentially simulate an 'attack' or place my payloads into. This resulted to the discovery of those findings.</p>
+
+<p>Most of the findings I found in this platform are marked as High severity. If you were wondering why the bounty amount is only like that even if its mostly High in severity, it is due to their policies in place (Yep, I know, somehow low compared to others, but still, that&rsquo;s some buck when you&rsquo;re situated in the Philippines). Below are the range of bounty amounts for each severity:</p>
+   
+<ul>
+<li>Critical -&gt; $900-1000</li>
+<li>High / Important -&gt; $300-400</li>
+<li>Medium / Moderate -&gt; $50-80</li>
+<li>Low -&gt; $15-30</li>
+</ul>
+
+<p>In some cases, I targeted and only participated in bug bounty events in their platform wherein they double the given bounty range to increase the rewards. Hence, there were instances that I didn&rsquo;t manage to escalate some findings and rather decided to submit it immediately such as the SSRF ones because I might be prone to duplicates knowing that other bug bounty hunters are actively looking for security bugs as well.</p>
+<p>There are other findings that I didn&rsquo;t only found through the powerhouse SEA e-Commerce platform, but also to other assets that the startup &lsquo;unicorn&rsquo; owns. Overall, I found 45 security issues in their assets. That&rsquo;s why it led me to be included in their Top 20 lineup of web application security researchers for 2018.</p>
+  </article>
+<ul class="tags__list">
+    </ul>
+ <div class="pagination">
+    <a class="pagination__item" href="https://dnx.zone/writeups/stored-xss-in-asus-healthcare-subdomain/">
+        <span class="pagination__label">Previous Post</span>
+        <span class="pagination__title">[ASUS] Stored XSS in ASUS Healthcare Subdomain</span>
+    </a>
+    <a class="pagination__item" href="https://dnx.zone/writeups/fb-page-admin-disclosure-via-an-upgraded-page-post/">
+      <span class="pagination__label">Next Post</span>
+      <span class="pagination__title" >[Facebook] Page Admin Disclosure via an Upgraded Page Post</a>
+    </a>
+</div>
+</div>
+  </main>
+<footer>
+  <div class="social-icons">
+  <a class="social-icons__icon social-icons__icon--linkedin" href="https://linkedin.com/in/0x61underscore" target="_blank" rel="noopener noreferrer"></a>
+  <a class="social-icons__icon social-icons__icon--github" href="https://github.com/notnoobdude" target="_blank" rel="noopener noreferrer"></a>
+  <a class="social-icons__icon social-icons__icon--email" href="mailto:danfabs@outlook.com" target="_blank" rel="noopener noreferrer"></a>
+  <a class="social-icons__icon social-icons__icon--gitlab" href="https://gitlab.com/notnoobdude" target="_blank" rel="noopener noreferrer"></a>
+</div>
+  <p>Dan Fabro  © 2021</p>
+</footer>
+  <script src="https://dnx.zone/js/index.js"></script>
+<script src="https://dnx.zone/vendor/prism/prism.js"></script>
+</body>
+</html>
