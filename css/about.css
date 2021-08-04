@@ -162,8 +162,7 @@ pre code {
   background-image: url("https://dnx.zone/images/code2.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 120px;
-  width: 150px;
+  width: 100%;
 }
 
 .lead {
