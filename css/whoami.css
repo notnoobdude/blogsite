@@ -5,6 +5,16 @@ button[type="submit"] {
   -webkit-appearance: button
 }
 
+/*
+.codeimage {
+  background-image: url("https://dnx.zone/images/code2.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+*/
+
 input,
 input[type=text],
 input[type=email] {
@@ -118,14 +128,6 @@ blockquote {
   line-height: 1.5rem;
   color: #fff;
   font-style: italic;
-}
-
-.codeimage {
-  background-image: url("https://dnx.zone/images/code2.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: auto;
 }
 
 pre {
