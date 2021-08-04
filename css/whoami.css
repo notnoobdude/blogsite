@@ -120,6 +120,14 @@ blockquote {
   font-style: italic;
 }
 
+.codeimage {
+  background-image: url("https://dnx.zone/images/code2.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
 pre {
   line-height: 1.45;
   margin-top: 1.5rem;
