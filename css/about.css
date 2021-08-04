@@ -158,14 +158,6 @@ pre code {
   border: 0
 }
 
-.codeimage {
-  background-image: url("https://dnx.zone/images/code2.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: auto;
-}
-
 .lead {
   font-size: 1.414rem
 }
