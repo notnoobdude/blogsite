@@ -91,67 +91,49 @@
       >Aug 17 2021</time
     >
   </header>
+  
+  <img src="https://dnx.zone/images/code3.svg"> 
+  
   <article class="post__content">
 
 <p>It's been a year since day one of me working as an SQA Engineer at a <a href="https://innovuze.com/">software development company</a> here in the Philippines and I must say that I really learned a lot. Going out of my forte as a penetration tester, I managed to experience other types of testing methodologies, test out multiple projects, and learn from my colleagues at work.</p>
 
 <p>Prior to this engagement, I didn't have any experience with Software Quality Assurance, and I must say, those Youtube videos and free learning or training resources did really helped me a lot in gaining insights, fundamental knowledge, and skills. Nevertheless, this blog is not about my experience, but is about the first version compilation of my software testing arsenal because somebody out there might need it.
     
-    
-<h1 id="tool_relevance">Relevance of Software Testing Tools</h1>
+<h2 id="tool_relevance">Relevance of Software Testing Tools</h2>
 
 <p>Like any other profession, certain tools are needed to accomplish some necessary tasks. Either to maximize time, reduce effort, or reduce costs. In the software testing industry, there are several testing techniques that are covered and needs to be conducted depending on the test requirements and project specifications. Before reaching the end users, intensive software testing is done in order to identify the issues that the developing project upholds. With this in mind, time is one huge factor. The faster the QA personnel does his/her tests and with precision, sprint deadlines will surely be met.</p>
 <p>Software testing is one vital part of the Software Development Life Cycle (SDLC) process that's why the QA personnel needs to fully understand the end users or client audience to come up with the necessary test cases that will help in improving and meeting their satisfaction.</p>
-    
-    
-<ul>
-<li>STORED XSS via Product Title field ($400)</li>
-<li>STORED XSS via Shop Name field ($400)</li>
-<li>STORED XSS by bypassing File Upload default filetypes($400)</li>
-<li>STORED XSS via insertion on Multi-Clickable Banner&rsquo;s URL ($300)</li>
-<li>STORED XSS via Voucher Promotion&rsquo;s Title and Description ($300)</li>
-<li>STORED XSS via Free Style Feed ($300)</li>
-<li>SSRF via coverURL param ($300)</li>
-<li>OPEN REDIRECT via todo param ($100)</li>
-<li>SSRF via Product Link field ($300)</li>
-<li>SSRF via imageURL param ($300)</li>
-<li>SSRF via freestyleImgUrl param ($160)</li>
-<li>SSRF via coverURL param ($300)</li>
-
-</ul>
-
 <p>Without further ado...</p>
-    
-    
 
-<h1 id="description">Toolkit</h1>
+<h2 id="description">Software Arsenal v1.0</h2>
     
-<h2>Chrome, Edge, and Firefox are your best buddies!<h2>
+<h3>Chrome, Edge, and Firefox are your best buddies!<h3>
   
   <p>Yep, I said it, no tests are done on your web application if you can't access it locally via a browser and for that case, having these power-trio really helps. You can basically add up Safari in here, but since I'm using a Windows machine, I'm somehow bias on these ones. Anyhow, there are some bugs that are non-existent on Chrome, but is present on the Firefox and Edge. Vice versa.</p>
   
  <p>Each of these browsers can be added with plug-ins as well. Mainly, when I conduct certain tests using some plugins, Chrome is my goto browser.</p>
 
-<h2>Browserstack<h2>
+<h3>Browserstack<h3>
   <p>I typically use <a href="https://www.browserstack.com/">Browserstack</a> when doing cross-browser confirmatory and exploratory testing.</p>
 
-<h2>WebPageTest<h2>
+<h3>WebPageTest<h3>
   <p><a href="https://www.webpagetest.org/">WebPageTest</a> is a free website speed test tool that uses real browsers and consumer connection speeds to do a free website speed test from various places around the world. It enables QA specialists to conduct both basic or advanced test, which may include multi-step transactions, video capture, content blocking, and other features.</p>
 
-<h2>PageSpeed Insights (PSI)<h2>
+<h3>PageSpeed Insights (PSI)<h3>
   <p><a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights (PSI)</a> generates data on the performance of the mobile and desktop devices' web pages, but only according to Google's speed standards. It also offers tips about how to make the page better.</p>
   
-<h2>Chrome Plugins<h2>
+<h3>Chrome Plugins<h3>
   <ul>
-  <li><a href="https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc">VisBug</a> - Open source plugin tool on Chrome for real-time design interactions and hotkeys on the browser</li>
-  <li><a href="https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh">Window Resizer</a> - For simulation of different screen resolutions by automatically resizing the browser window in one click.</li>
-  <li><a href="https://chrome.google.com/webstore/detail/ghostery-%E2%80%93-privacy-ad-blo/mlomiejdfkolichcflejclcbmpeaniij">Ghostery</a> - A powerful privacy extension. Block ads, stop trackers and speed up websites.</li>
-  <li><a href="https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg">Wappalyzer</a> - Identifies the tech stack used by the current web page.</li>
-  <li><a href="https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen">Grammarly</a> - Helps in checking grammatical errors. Also detects and suggests better sentence and wording structure.</li>
-  <li><a href="https://chrome.google.com/webstore/detail/loom-for-chrome/liecbddmkiiihnedobmlmillhodjkdmb">Loom</a> - A recording tool to conduct Proof-of-Concepts on found webpage UI or functionality issues.</li>
+  <li><p><a href="https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc">VisBug</a> - Open source plugin tool on Chrome for real-time design interactions and hotkeys on the browser</li></p>
+  <li><p><a href="https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh">Window Resizer</a> - For simulation of different screen resolutions by automatically resizing the browser window in one click.</li></p>
+  <li><p><a href="https://chrome.google.com/webstore/detail/ghostery-%E2%80%93-privacy-ad-blo/mlomiejdfkolichcflejclcbmpeaniij">Ghostery</a> - A powerful privacy extension. Block ads, stop trackers and speed up websites.</li></p>
+  <li><p><a href="https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg">Wappalyzer</a> - Identifies the tech stack used by the current web page.</li></p>
+  <li><p><a href="https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen">Grammarly</a> - Helps in checking grammatical errors. Also detects and suggests better sentence and wording structure.</li></p>
+  <li><p><a href="https://chrome.google.com/webstore/detail/loom-for-chrome/liecbddmkiiihnedobmlmillhodjkdmb">Loom</a> - A recording tool to conduct Proof-of-Concepts on found webpage UI or functionality issues.</li></p>
   </ul>
 
-<img src="https://dnx.zone/images/code3.svg">  
+ 
   </article>
   
 <ul class="tags__list">
