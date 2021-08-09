@@ -11,15 +11,23 @@
     
 	<atom:link href="https://dnx.zone/writeups/index.xml" rel="self" type="application/rss+xml" />
     
-    
+     <item>
+      <title>Software Testing Arsenal v1.0</title>
+      <link>https://dnx.zone/writeups/software-testing-arsenal-v1/</link>
+      <pubDate>Tue, 10 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dnx.zone/writeups/software-testing-arsenal-v1/</guid>
+      <description></description>
+    </item>
+	  
+	  
     <item>
       <title>[Facebook] Page Admin Disclosure via an Upgraded Page Post</title>
       <link>https://dnx.zone/writeups/fb-page-admin-disclosure-via-an-upgraded-page-post/</link>
       <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dnx.zone/writeups/fb-page-admin-disclosure-via-an-upgraded-page-post/</guid>
-      <description>Been in the bug bounty and/or ethical hacking scene for more than 4 years now and this is my first write-up (I hope you bear with me) since most of the programs I hunt into are not allowing disclosures. I mostly hunt vulnerabilities on Alibaba and other independent/private bug bounty programs.
-Description Soooo I was posting for a special event that happened in one of my organization’s pages. I upgraded that post through a prompt message, “It looks like something special happened.</description>
+      <description></description>
     </item>
     
     <item>
@@ -28,7 +36,7 @@ Description Soooo I was posting for a special event that happened in one of my o
       <pubDate>Mon, 27 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://dnx.zone/writeups/how-i-hacked-your-favorite-ecommerce-site-wayback-2018/</guid>
-      <description>This platform is considered to be one of the bigshots in the eCommerce industry particularly here in the Philippines and the rest of Southeast Asia. Initially, I thought that such e-Commerce platform didn&amp;rsquo;t have a bug bounty program not until they were acquired by this startup &amp;lsquo;unicorn,&amp;rsquo; thus, making it as one of its assets/acquisitions. Even though such &amp;lsquo;unicorn&amp;rsquo; didn&amp;rsquo;t include it yet in its bug bounty program scope, still, I thought of submitting my findings to them.</description>
+      <description></description>
     </item>
     
     <item>
@@ -37,8 +45,7 @@ Description Soooo I was posting for a special event that happened in one of my o
       <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://dnx.zone/writeups/stored-xss-in-asus-healthcare-subdomain/</guid>
-      <description>I found this vulnerability while poking around the subdomains of ASUS wayback 2018. Such subdomain was still relatively new that time which means that potentially juicy security issues are still an easy catch. If I can remember correctly, this security issue was found when I was on a &amp;lsquo;pisonet&amp;rsquo; together with my friends and playing DOTA 2. 🤣
-Description ASUS Healthcare is a health data management platform wherein end users can keep track of his or her self, family, and friend&amp;rsquo;s health data using the wearable or IoT device they use in place.</description>
+      <description></description>
     </item>
     
   </channel>
