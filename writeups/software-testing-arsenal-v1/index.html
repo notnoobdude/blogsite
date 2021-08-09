@@ -93,15 +93,15 @@
   </header>
   <article class="post__content">
 
-<p>It's been a year since day one of me working as a SQA Engineer at a software development company here in the Philippines and I must say that I really learned a lot. Going out of my forte as a penetration tester, I managed to experience other types of testing methodologies and got to test out multiple projects as well.</p>
+<p>It's been a year since day one of me working as an SQA Engineer at a <a href="https://innovuze.com/">software development company</a> here in the Philippines and I must say that I really learned a lot. Going out of my forte as a penetration tester, I managed to experience other types of testing methodologies, test out multiple projects, and learn from my colleagues at work.</p>
 
-<p>Prior to this engagement, I didn't have any experience with Software Quality Assurance, and I must say, those Youtube videos and free learning resources did really helped me a lot in gaining insights, fundamental knowledge, and skills. Nevertheless, this blog is not about my experience, but is about the first version compilation of my software testing arsenal. 
+<p>Prior to this engagement, I didn't have any experience with Software Quality Assurance, and I must say, those Youtube videos and free learning or training resources did really helped me a lot in gaining insights, fundamental knowledge, and skills. Nevertheless, this blog is not about my experience, but is about the first version compilation of my software testing arsenal because somebody out there might need it.
     
     
 <h1 id="tool_relevance">Relevance of Software Testing Tools</h1>
 
-<p>Like any other profession, certain tools are needed to accomplish some particular tasks. In the software testing industry, there are several testing techniques that are covered and needs to be conducted depending on the test requirements and project specifications. Before reaching the end users, intensive software testing is done to identify the issues that the developing project upholds. With this in mind, time is one huge factor. The faster the QA personnel does his/her tests and with precision, sprint deadlines will surely be met.</p>
-<p>Software testing is one vital part of the Software Development Life Cycle (SDLC) process that's why the QA personnel needs to fully understand the end users or client audience to come up with the necessary test cases that will help in improving and meeting their satisfaction.
+<p>Like any other profession, certain tools are needed to accomplish some necessary tasks. Either to maximize time, reduce effort, or reduce costs. In the software testing industry, there are several testing techniques that are covered and needs to be conducted depending on the test requirements and project specifications. Before reaching the end users, intensive software testing is done in order to identify the issues that the developing project upholds. With this in mind, time is one huge factor. The faster the QA personnel does his/her tests and with precision, sprint deadlines will surely be met.</p>
+<p>Software testing is one vital part of the Software Development Life Cycle (SDLC) process that's why the QA personnel needs to fully understand the end users or client audience to come up with the necessary test cases that will help in improving and meeting their satisfaction.</p>
     
     
 <ul>
@@ -120,36 +120,40 @@
 
 </ul>
 
-<p>The rewards given by such bug bounty program is based on their own range of bounty standard.</p>
-
-<h1 id="description">Description</h1>
-
-<p>To those who don&rsquo;t know yet, Stored XSS or Persistent Cross-Site Scripting vulnerability is considered to be the <a href="https://portswigger.net/web-security/cross-site-scripting/stored">most impactful</a> than the other types of XSSes. This is due to the fact that it is, by nature, self-contained and triggers the applied malicious scripts even without no user interaction. The impact towards the platform is significantly high also because the victims are already logged in (which might be prone to stealing of authenticated tokens), compared to <a href="https://portswigger.net/web-security/cross-site-scripting/reflected">Reflected XSS</a> wherein the attacker still has to, somehow, assume that the victim user is currently logged in&ndash;thus, with a lower bug bounty reward.</p>
-
-<p>As for Open Redirect, there are a lot utilizations for it. For two, it might be used in redirecting the victim user to a malicious site and/or it might be used to chain with other web application attacks such as <a href="https://portswigger.net/web-security/csrf">CSRF</a> or <a href="https://spycloud.com/what-is-account-takeover/">Account Takeover</a>.</p>
-
-<p>For SSRF or <a href="https://portswigger.net/web-security/ssrf">Server-Side Request Forgery</a>, it might be used as means to execute unauthorized actions or perhaps fetch some data within the organization or company.</p>
-
-  <img src="https://dnx.zone/images/hacker1.svg">  
+<p>Without further ado...</p>
     
-<h1 id="further-notes">Further Notes</h1>
+    
 
-<p>Since this is an e-Commerce platform, there are two user privileges that were identified here: The Seller and the Buyer. The Seller initiates the creation, edit, and deletion of the Shop along with its vouchers, products, promos, shop designs, you name it. The Seller can also be the Buyer. While the Buyer can only and primarily visit the shop, choose which products to &lsquo;addutucartu&rsquo;, and checkout. Note that the Buyer and the Seller have different user interfaces. The Seller needs to log in on the &lsquo;main&rsquo; site, instead of the seller site, for him/her to buy some products.</p>
+<h1 id="description">Toolkit</h1>
+    
+<h2>Chrome, Edge, and Firefox are your best buddies!<h2>
+  
+  <p>Yep, I said it, no tests are done on your web application if you can't access it locally via a browser and for that case, having these power-trio really helps. You can basically add up Safari in here, but since I'm using a Windows machine, I'm somehow bias on these ones. Anyhow, there are some bugs that are non-existent on Chrome, but is present on the Firefox and Edge. Vice versa.</p>
+  
+ <p>Each of these browsers can be added with plug-ins as well. Mainly, when I conduct certain tests using some plugins, Chrome is my goto browser.</p>
 
-<p>One common thing that I did in all of these web application vulnerabilities is that equipping thy self with a &ldquo;what if I became the evil seller here?&rdquo; mentality. Instead of hunting for vulnerabilities on the Buyer&rsquo;s end, which is commonly what others would do, I hunted and applied use cases via the Seller's perspective. Fuzzed and recon'd the platform all through out and for every endpoint, parameter, or field I could identify, I try to check the source code and its behavior if there's any form of user input sanitation implemented to it. If there's one, proceed to application of some bypasses. If there's none, proceed to exploitation. Likewise, the method of always keeping tabs with a checklist especially detailing which features, pages, endpoints, and/or fields are being displayed/accessible on the Buyer's end and what is not, also towards the Seller, how they are interconnected, and triggering factors--I took notes of all the things I could potentially simulate an 'attack' or place my payloads into. This resulted to the discovery of those findings.</p>
+<h2>Browserstack<h2>
+  <p>I typically use <a href="https://www.browserstack.com/">Browserstack</a> when doing cross-browser confirmatory and exploratory testing.</p>
 
-<p>Most of the findings I found in this platform are marked as High severity. If you were wondering why the bounty amount is only like that even if its mostly High in severity, it is due to their policies in place (Yep, I know, somehow low compared to others, but still, that&rsquo;s some buck when you&rsquo;re situated in the Philippines). Below are the range of bounty amounts for each severity:</p>
-   
-<ul>
-<li>Critical -&gt; $900-1000</li>
-<li>High / Important -&gt; $300-400</li>
-<li>Medium / Moderate -&gt; $50-80</li>
-<li>Low -&gt; $15-30</li>
-</ul>
+<h2>WebPageTest<h2>
+  <p><a href="https://www.webpagetest.org/">WebPageTest</a> is a free website speed test tool that uses real browsers and consumer connection speeds to do a free website speed test from various places around the world. It enables QA specialists to conduct both basic or advanced test, which may include multi-step transactions, video capture, content blocking, and other features.</p>
 
-<p>In some cases, I targeted and only participated in bug bounty events in their platform wherein they double the given bounty range to increase the rewards. Hence, there were instances that I didn&rsquo;t manage to escalate some findings and rather decided to submit it immediately such as the SSRF ones because I might be prone to duplicates knowing that other bug bounty hunters are actively looking for security bugs as well.</p>
-<p>There are other findings that I didn&rsquo;t only found through the powerhouse SEA e-Commerce platform, but also to other assets that the startup &lsquo;unicorn&rsquo; owns. Overall, I found 45 security issues in their assets. That&rsquo;s why it led me to be included in their Top 20 lineup of web application security researchers for 2018.</p>
+<h2>PageSpeed Insights (PSI)<h2>
+  <p><a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights (PSI)</a> generates data on the performance of the mobile and desktop devices' web pages, but only according to Google's speed standards. It also offers tips about how to make the page better.</p>
+  
+<h2>Chrome Plugins<h2>
+  <ul>
+  <li><a href="https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc">VisBug</a> - Open source plugin tool on Chrome for real-time design interactions and hotkeys on the browser</li>
+  <li><a href="https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh">Window Resizer</a> - For simulation of different screen resolutions by automatically resizing the browser window in one click.</li>
+  <li><a href="https://chrome.google.com/webstore/detail/ghostery-%E2%80%93-privacy-ad-blo/mlomiejdfkolichcflejclcbmpeaniij">Ghostery</a> - A powerful privacy extension. Block ads, stop trackers and speed up websites.</li>
+  <li><a href="https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg">Wappalyzer</a> - Identifies the tech stack used by the current web page.</li>
+  <li><a href="https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen">Grammarly</a> - Helps in checking grammatical errors. Also detects and suggests better sentence and wording structure.</li>
+  <li><a href="https://chrome.google.com/webstore/detail/loom-for-chrome/liecbddmkiiihnedobmlmillhodjkdmb">Loom</a> - A recording tool to conduct Proof-of-Concepts on found webpage UI or functionality issues.</li>
+  </ul>
+
+<img src="https://dnx.zone/images/code3.svg">  
   </article>
+  
 <ul class="tags__list">
     </ul>
  <div class="pagination">
