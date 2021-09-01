@@ -99,7 +99,7 @@ function getTokenJS() {
     xhr.onload = function (e) {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
             // Get the document from the response
-            page = xhr.responseXML;
+            page = xhr.response;
             input = page.getElementsByTagName("update")[0];
             input2 = input.childNodes[0];
             input3 = input2.replace('<\![CDATA[ ',' ]]>', "");
