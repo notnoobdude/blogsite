@@ -40,8 +40,8 @@ x.onreadystatechange = function() {
    // token.replace(/<update id="j_id1:javax.faces.ViewState:0">/, "");
   //  var y = token.childNodes[0];
     var test = token.nodeValue.replace('<\![CDATA[ ',' ]]>', "");
-    var token2 = encodeURI(test);
-    document.getElementById("findtoken").value = token2;
+   // var token2 = encodeURI(test);
+    document.getElementById("findtoken").value = test;
     document.getElementById("form").submit();
   }
 };
