@@ -32,10 +32,11 @@ x.onreadystatechange = function() {
      // field: x.responseText.match(/id="j_id1:javax.faces.ViewState:0" value="(.+)"/)[1]
     //}
     //token = demoJSON.field.replace(/(<([^>]+)>)/ig, "");
-    var token = x.responseText.getElementsByTagName('update').replace('<\![CDATA[ ',']]>', "");
+    var token = x.responseText.getElementsByTagName('update');
    // token.replace(/<update id="j_id1:javax.faces.ViewState:0">/, "");
-    //token.
-    document.getElementById("findtoken").value = token;
+    var y = token.childNodes[0];
+    var test = y.replace('<\![CDATA[ ',']]>', "");
+    document.getElementById("findtoken").value = test;
     document.getElementById("form").submit();
   }
 }
