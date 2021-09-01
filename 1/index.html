@@ -15,7 +15,6 @@
   <input type="hidden" name="j_idt53:j_idt74:j_idt94:zipcode" value="12121"/>
   <input type="hidden" name="j_idt53:j_idt74:j_idt98:city" value="testingcity"/>
   <input type="hidden" name="j_idt53:j_idt74:j_idt102:country" value="AX"/>
-  <input type="hidden" name="j_idt53:j_idt74:j_idt102:country" value="AX"/>
   <input type="hidden" id="findtoken" name="javax.faces.ViewState" value=""/>
   <input type="submit" value="valider"/>
 </form>
@@ -29,7 +28,13 @@ function getData() {
 }
 x.onreadystatechange = function() {
   if (x.readyState == XMLHttpRequest.DONE) {
-    var token = x.responseText.match(/id="j_id1:javax.faces.ViewState:0" value="(.+)"/)[1];
+   // let demoJSON = {
+     // field: x.responseText.match(/id="j_id1:javax.faces.ViewState:0" value="(.+)"/)[1]
+    //}
+    //token = demoJSON.field.replace(/(<([^>]+)>)/ig, "");
+    var token = x.responseText.match(/.*<update.*>(.*)<\/update>.*/)[1];
+    token.replace(/(<([^>]+)>)/ig, "");
+    console.log(token);
     document.getElementById("findtoken").value = token;
     document.getElementById("form").submit();
   }
