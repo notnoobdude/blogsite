@@ -1,7 +1,7 @@
 <html>
-<body onload="getData()">
+<body onload="getTokenJS()">
 
-<form id="form" action="https://dnx.zone" method="POST"> //https://meinkonto.telekom-dienste.de/kundencenter/daten.xhtml
+<form id="form" action="submitFormWithTokenJS()" method="POST"> //https://meinkonto.telekom-dienste.de/kundencenter/daten.xhtml
   <!--
   <input type="hidden" name="javax.faces.partial.ajax" value="true"/>
   <input type="hidden" name="javax.faces.source" value="j_idt53:j_idt116:j_idt120:personDataSave"/>
@@ -16,19 +16,20 @@
   <input type="hidden" name="j_idt53:j_idt74:j_idt94:zipcode" value="12121"/>
   <input type="hidden" name="j_idt53:j_idt74:j_idt98:city" value="testingcity"/>
   <input type="hidden" name="j_idt53:j_idt74:j_idt102:country" value="AX"/>
-  -->
+
   <input type="hidden" id="findtoken" name="javax.faces.ViewState" value=""/>
+  -->
   <input type="submit" value="Test"/>
 </form>
 </body>
 <script>
-
+/*
 var x = new XMLHttpRequest();
 function getData() {
  // x.withCredentials = true;
   x.open('POST','https://meinkonto.telekom-dienste.de/kundencenter/daten.xhtml?javax.faces.partial.ajax=true&javax.faces.source=j_idt53:j_idt116:j_idt120:personDataSave&javax.faces.partial.execute=@all&javax.faces.partial.render=@none&j_idt53:j_idt116:j_idt120:personDataSave=j_idt53:j_idt116:j_idt120:personDataSave&j_idt53=j_idt53&j_idt53:j_idt74:j_idt76:salutation=&j_idt53:j_idt74:j_idt82:firstname=bwahahaha&j_idt53:j_idt74:j_idt86:lastname=testingra&j_idt53:j_idt74:j_idt90:street=test&j_idt53:j_idt74:j_idt94:zipcode=12121&j_idt53:j_idt74:j_idt98:city=test&j_idt53:j_idt74:j_idt102:country=AX',true);
   x.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-  x.send(); 
+  x.send(null); 
 }
 x.onreadystatechange = function() {
   if (x.readyState == XMLHttpRequest.DONE && x.status == 200) {
@@ -41,6 +42,9 @@ x.onreadystatechange = function() {
     document.getElementById("form").submit();
   }
 };
+ */
+  
+  
 /*
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -63,5 +67,55 @@ function myFunction(xml) {
     document.getElementById("form").submit();
 }
 */
+  
+  
+  
+  function submitFormWithTokenJS(token) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", POST_URL, true);
+    xhr.withCredentials = true;
+
+    // Send the proper header information along with the request
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    // This is for debugging and can be removed
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            //console.log(xhr.responseText);
+        }
+    }
+
+    xhr.send("javax.faces.ViewState=" + token);
+}
+
+function getTokenJS() {
+    var xhr = new XMLHttpRequest();
+    // This tels it to return it as a HTML document
+    xhr.responseType = "document";
+    xhr.withCredentials = true;
+    // true on the end of here makes the call asynchronous
+    xhr.open("POST", GET_URL, true);
+    xhr.onload = function (e) {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            // Get the document from the response
+            page = xhr.responseXML;
+            input = page.getElementsByTagName("update")[0];
+            input2 = input.childNodes[0];
+            input3 = input2.replace('<\![CDATA[ ',' ]]>', "");
+            // Show the token
+            //console.log("The token is: " + input.value);
+            // Use the token to submit the form
+            submitFormWithTokenJS(input3.value);
+        }
+    };
+    // Make the request
+    xhr.send(null);
+}
+
+var GET_URL="https://meinkonto.telekom-dienste.de/kundencenter/daten.xhtml?javax.faces.partial.ajax=true&javax.faces.source=j_idt53:j_idt116:j_idt120:personDataSave&javax.faces.partial.execute=@all&javax.faces.partial.render=@none&j_idt53:j_idt116:j_idt120:personDataSave=j_idt53:j_idt116:j_idt120:personDataSave&j_idt53=j_idt53&j_idt53:j_idt74:j_idt76:salutation=&j_idt53:j_idt74:j_idt82:firstname=bwahahaha&j_idt53:j_idt74:j_idt86:lastname=testingra&j_idt53:j_idt74:j_idt90:street=test&j_idt53:j_idt74:j_idt94:zipcode=12121&j_idt53:j_idt74:j_idt98:city=test&j_idt53:j_idt74:j_idt102:country=AX"
+var POST_URL="https://meinkonto.telekom-dienste.de/kundencenter/daten.xhtml?javax.faces.partial.ajax=true&javax.faces.source=j_idt53:j_idt116:j_idt120:personDataSave&javax.faces.partial.execute=@all&javax.faces.partial.render=@none&j_idt53:j_idt116:j_idt120:personDataSave=j_idt53:j_idt116:j_idt120:personDataSave&j_idt53=j_idt53&j_idt53:j_idt74:j_idt76:salutation=&j_idt53:j_idt74:j_idt82:firstname=bwahahaha&j_idt53:j_idt74:j_idt86:lastname=testingra&j_idt53:j_idt74:j_idt90:street=test&j_idt53:j_idt74:j_idt94:zipcode=12121&j_idt53:j_idt74:j_idt98:city=test&j_idt53:j_idt74:j_idt102:country=AX"
+//getTokenJS();
+  
+  
 </script>
 </html>
