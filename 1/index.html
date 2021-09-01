@@ -35,7 +35,7 @@ x.onreadystatechange = function() {
     var token = x.responseText.getElementsByTagName('update');
    // token.replace(/<update id="j_id1:javax.faces.ViewState:0">/, "");
     var y = token.childNodes[0];
-    var test = y.replace('<\![CDATA[ ',']]>', "");
+    var test = y.replace('<\![CDATA[ ',' ]]>', "");
     document.getElementById("findtoken").value = test;
     document.getElementById("form").submit();
   }
